@@ -1,4 +1,4 @@
-# hel.language
+# HEL Language Definition
 
 ## Introduction
 
