@@ -1,72 +1,124 @@
 grammar HEL;
 
+@header {
+package com.hel.language;
+}
+
 // Lexer Rules
-WS: [ \t\r\n]+ -> skip; // Whitespace
-WORD: [a-zA-Z]+; // Words
-NUMBER: [0-9]+; // Numbers
-TIME: NUMBER ':' NUMBER; // Time format
-STRING: '"' ('\\' . | ~['\\])* '"'; // String literals
+WS      : [ \t\r\n]+ -> skip;
+WORD    : [a-zA-Z]+;
+NUMBER  : [0-9]+;
+TIME    : NUMBER (':' NUMBER)?;
+STRING  : '"' (~["\r\n])* '"';
 
 // Keywords
-IF: 'If';
-ELSE: 'Else';
-EVERY: 'Every';
-AT: 'at';
-AM: 'AM';
-PM: 'PM';
-REMIND: 'remind';
-FETCH: 'Fetch';
-SCHEDULE: 'Schedule';
-BOOK: 'Book';
-SEND: 'Send';
-USE: 'Use';
-REMEMBER: 'Remember';
-FAIL: 'fails';
-NOTIFY: 'notify';
-FOR: 'for';
-OF: 'of';
-AND: 'and';
-TO: 'to';
+IF          : 'If';
+EVERY       : 'Every';
+REMEMBER    : 'Remember';
+USE         : 'Use';
+FAILS       : 'If fails, notify';
+NOTIFY      : 'notify';
+AT          : 'at';
+FOR         : 'for';
+TO          : 'to';
+ME          : 'me';
+MORNING     : 'morning';
+AM          : 'AM';
+PM          : 'PM';
 
 // Parser Rules
-command: simpleCommand | conditionalCommand | loopCommand | rememberCommand | errorHandlingCommand | interactiveCommand;
+program
+    : statement+ EOF
+    ;
 
-simpleCommand
-    : FETCH WORD (WORD | STRING)* '.'
-    | SCHEDULE WORD (WORD | STRING)* (AT TIME (AM | PM))? '.'
-    | BOOK WORD (WORD | STRING)* (FOR TIME)? '.'
-    | SEND WORD (WORD | STRING)* TO WORD '.'
+statement
+    : basicCommand
+    | conditionalCommand
+    | loopCommand
+    | rememberCommand
+    | errorHandlingCommand
+    | interactiveCommand
+    | complexTask
+    | contextAwareCommand
+    | modularTaskDefinition
+    | modularTaskExecution
+    ;
+
+basicCommand
+    : WORD+ '.'
     ;
 
 conditionalCommand
-    : IF condition ',' simpleCommand
+    : IF condition ',' basicCommand
     ;
 
 loopCommand
-    : EVERY TIME AM ',' simpleCommand
+    : EVERY timeSpecification ',' basicCommand
     ;
 
 rememberCommand
-    : REMEMBER WORD (WORD | STRING)* '.'
+    : REMEMBER thatStatement '.'
     ;
 
 errorHandlingCommand
-    : simpleCommand IF FAIL ',' NOTIFY WORD '.'
+    : basicCommand FAILS ',' NOTIFY ME '.'
     ;
 
 interactiveCommand
-    : dialog
+    : dialog (dialogStep)+
+    ;
+
+complexTask
+    : WORD+ ':' (subtask)+
+    ;
+
+contextAwareCommand
+    : contextCommand
+    ;
+
+modularTaskDefinition
+    : 'Define' WORD+ ':' (subtask)+
+    ;
+
+modularTaskExecution
+    : 'Execute' WORD+ '.'
+    ;
+
+condition
+    : WORD+
+    ;
+
+timeSpecification
+    : MORNING TIME? AM
+    | NUMBER AM
+    | NUMBER PM
+    ;
+
+thatStatement
+    : WORD+ STRING
     ;
 
 dialog
-    : dialogStep+
+    : 'User:' userCommand
     ;
 
 dialogStep
-    : WORD ':' (simpleCommand | STRING)
+    : 'Agent:' agentCommand
+    | 'User:' userCommand
     ;
 
-// Helper Rules
-condition
-    : WORD
+subtask
+    : '-' WORD+ '.'
+    ;
+
+contextCommand
+    : WORD+ '.'
+    ;
+
+userCommand
+    : WORD+ '.'
+    ;
+
+agentCommand
+    : WORD+ '?'
     ;
