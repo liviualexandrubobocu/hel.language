@@ -71,6 +71,33 @@ Execute my morning routine.
 Conclusion:
 A language for agentic AI that closely resembles natural English would need to support clear, intuitive commands, handle context and follow-up questions, manage conditions and errors, and allow for the definition and reuse of routines. By mimicking the structure and vocabulary of natural language, it can make interaction with AI more accessible and efficient for users.
 
+## HEL Grammar
+
+Explanation
+Lexer Rules: These rules define the basic tokens like whitespace (WS), words (WORD), numbers (NUMBER), time format (TIME), and string literals (STRING).
+
+Keywords: These are specific words used in HEL for various commands.
+
+Parser Rules: These define the structure of commands in HEL.
+
+command: The top-level rule that can match any type of command.
+
+simpleCommand: Matches simple commands like fetching information, scheduling, booking, and sending messages.
+
+conditionalCommand: Matches conditional commands using "If".
+
+loopCommand: Matches commands that repeat using "Every".
+
+rememberCommand: Matches commands that store information using "Remember".
+
+errorHandlingCommand: Matches commands with error handling using "If fails, notify".
+
+interactiveCommand: Matches interactive dialogues.
+
+dialog and dialogStep: Define the structure of dialogues with multiple steps.
+
+condition: A helper rule for matching conditions.
+
 
 
 
