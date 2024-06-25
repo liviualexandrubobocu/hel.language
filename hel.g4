@@ -1,4 +1,4 @@
-grammar HEL;
+grammar hel;
 
 @header {
 package com.hel.language;
@@ -25,6 +25,15 @@ ME          : 'me';
 MORNING     : 'morning';
 AM          : 'AM';
 PM          : 'PM';
+AND         : 'AND';
+OR          : 'OR';
+NOT         : 'NOT';
+CREATE      : 'Create';
+READ        : 'Read';
+UPDATE      : 'Update';
+DELETE      : 'Delete';
+WITH        : 'with';
+HAVING      : 'having';
 
 // Parser Rules
 program
@@ -42,6 +51,7 @@ statement
     | contextAwareCommand
     | modularTaskDefinition
     | modularTaskExecution
+    | crudCommand
     ;
 
 basicCommand
@@ -49,11 +59,28 @@ basicCommand
     ;
 
 conditionalCommand
-    : IF condition ',' basicCommand
+    : IF conditionExpr ',' basicCommand
+    ;
+
+conditionExpr
+    : condition (('AND' | 'OR') condition)*
+    | 'NOT' condition
+    ;
+
+condition
+    : WORD+
     ;
 
 loopCommand
-    : EVERY timeSpecification ',' basicCommand
+    : EVERY interval ',' basicCommand
+    ;
+
+interval
+    : NUMBER? 'minutes' | NUMBER? 'hours' | TIME_SPEC
+    ;
+
+TIME_SPEC
+    : NUMBER (':' NUMBER)? ('AM' | 'PM')?
     ;
 
 rememberCommand
@@ -61,7 +88,11 @@ rememberCommand
     ;
 
 errorHandlingCommand
-    : basicCommand FAILS ',' NOTIFY ME '.'
+    : basicCommand FAILS ',' (NOTIFY ME | customErrorHandling)
+    ;
+
+customErrorHandling
+    : WORD+ (',' WORD+)*
     ;
 
 interactiveCommand
@@ -70,6 +101,10 @@ interactiveCommand
 
 complexTask
     : WORD+ ':' (subtask)+
+    ;
+
+subtask
+    : '-' WORD+ '.'
     ;
 
 contextAwareCommand
@@ -82,10 +117,6 @@ modularTaskDefinition
 
 modularTaskExecution
     : 'Execute' WORD+ '.'
-    ;
-
-condition
-    : WORD+
     ;
 
 timeSpecification
@@ -107,10 +138,6 @@ dialogStep
     | 'User:' userCommand
     ;
 
-subtask
-    : '-' WORD+ '.'
-    ;
-
 contextCommand
     : WORD+ '.'
     ;
@@ -121,4 +148,19 @@ userCommand
 
 agentCommand
     : WORD+ '?'
+    ;
+
+crudCommand
+    : CREATE entity
+    | READ entity
+    | UPDATE entity
+    | DELETE entity
+    ;
+
+entity
+    : WORD+ (ATTRIBUTE STRING)*
+    ;
+
+ATTRIBUTE
+    : WITH | HAVING
     ;
