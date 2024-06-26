@@ -2,121 +2,148 @@
 
 ## Introduction
 
-The HEL language is a programming language designed for agentic AI systems. It aims to provide a syntax and semantics that closely resemble natural English, making it easy for humans to understand and for machines to process. This documentation provides an overview of the language's key features, syntax, and usage examples.
+The **hel** language is designed to facilitate communication between humans and AI agents, as well as between AI agents themselves.
+It aims to provide a syntax and semantics that closely resemble natural English (Hemingway's Language), making it easy for humans to understand and for machines to process.
+It aims to provide Turing completeness.
+Hel is a versatile language with a variety of features, including basic commands, conditional commands, loops, error handling, interactive commands, complex tasks, context-aware commands, modular task definition and execution, CRUD commands, function definition and calls, and list and dictionary declarations.
 
-## Key Features
+## Features
 
-- **Simple and Intuitive Syntax**: The language uses a subset of plain English phrases, making it easy for users to write commands.
-- **Context Awareness**: HEL language supports context to understand references and follow-up commands, enabling more natural and interactive conversations with the AI agent.
-- **Modularity and Extensibility**: Users can define and reuse tasks, promoting code reusability and maintainability.
-- **Error Handling**: The language provides clear ways to specify and handle potential errors or exceptions, ensuring robustness in command execution.
-- **Interactivity**: HEL language supports dialogues, allowing the agent to ask clarifying questions and engage in interactive conversations with the user.
+1. **Basic Commands**: Allows executing a sequence of words as a command.
+2. **Conditional Commands**: Allows executing a basic command based on a condition.
+3. **Loop Commands**: Allows executing a basic command repeatedly or based on a condition.
+4. **Error Handling**: Allows specifying actions to be taken if a command fails.
+5. **Interactive Commands**: Allows creating a dialog between a user and an agent.
+6. **Complex Tasks**: Allows defining and executing a sequence of subtasks.
+7. **Context-Aware Commands**: Allows executing a command based on the current context.
+8. **Modular Task Definition and Execution**: Allows defining and executing modular tasks.
+9. **CRUD Commands**: Allows creating, reading, updating, and deleting entities.
+10. **Function Definition and Calls**: Allows defining and calling functions.
+11. **List and Dictionary Declarations**: Allows declaring and initializing lists and dictionaries.
 
-## Syntax and Usage
+## Grammar Overview
+
+### Lexer Rules
+- **Whitespace (`WS`)**: Skips spaces, tabs, and newlines.
+- **Word (`WORD`)**: Matches sequences of alphabetic characters.
+- **Number (`NUMBER`)**: Matches sequences of digits.
+- **Time (`TIME`)**: Matches time in the format `HH:MM`.
+- **String (`STRING`)**: Matches text enclosed in double quotes.
+
+### Keywords
+- **IF, EVERY, REMEMBER, USE, FAILS, NOTIFY, AT, FOR, TO, ME, MORNING, AM, PM, AND, OR, NOT, CREATE, READ, UPDATE, DELETE, WITH, HAVING, FUNCTION, LIST, DICT, LET, WHILE**
+
+### Parser Rules
+- **Program**: Consists of one or more statements.
+- **Statement**: Can be a basic command, conditional command, loop command, remember command, error handling command, interactive command, complex task, context-aware command, modular task definition, modular task execution, CRUD command, function definition, list declaration, dictionary declaration, or variable assignment.
+
+## Command Definitions and Examples
 
 ### Basic Commands
-
-To issue a basic command, simply use plain English phrases. For example:
-
-```
-Fetch the latest news headlines.
+Represents a basic command consisting of one or more words followed by a period.
+```hel
+Turn on the lights.
 ```
 
-This command instructs the agent to perform a single action.
-
-### Conditional Statements
-
-HEL language supports conditional statements using the "If" structure. For example:
-
-```
-If it is raining, remind me to take an umbrella.
+### Conditional Commands
+Represents a conditional command with an if condition and a basic command.
+```hel
+If it is raining, close the windows.
 ```
 
-This command sets up a condition and specifies the action to be taken based on that condition.
-
-### Loops and Repetition
-
-To create commands that repeat at specific intervals, HEL language provides the "Every" structure. For example:
-
+### Loop Commands
+Represents a loop command that executes a basic command at a specified interval.
+```hel
+Every 5 minutes, check the weather.
 ```
-Every morning at 7 AM, give me a summary of today's weather and my calendar events.
+Represents a loop command with a for loop structure.
+```hel
+For (let $i = 0; $i < 10; let $i = $i + 1) {
+    Print $i.
+}
 ```
-
-This example demonstrates how to set up a recurring task using natural language.
-
-### Variables and References
-
-HEL language allows users to store preferences and refer to them later. For example:
-
-```
-Remember that my favorite color is blue. Use this color for the background of my reports.
+Represents a loop command with a while loop structure.
+```hel
+While (there is work) {
+    Process work.
+}
 ```
 
-This command demonstrates storing a preference and using it in subsequent commands.
-
-### Error Handling
-
-To handle potential errors or exceptions, HEL language provides the "If fails, notify" structure. For example:
-
-```
-Send an email to John. If it fails, notify me immediately.
+### Error Handling Commands
+Represents an error handling command with a basic command and optional custom error handling.
+```hel
+Send email fails, notify me.
 ```
 
-This command includes an action and specifies how to handle failure.
-
-### Interactive Dialogue
-
-HEL language supports interactive dialogues, enabling the agent to ask clarifying questions to complete a task. For example:
-
-```
-User: Book a table at an Italian restaurant for tonight.
-Agent: What time would you like the reservation?
-User: 7 PM.
-Agent: How many people will be attending?
-User: Four.
+### Interactive Commands
+Represents an interactive command with a dialog between a user and an agent.
+```hel
+User: What is the weather today?
+Agent: The weather today is sunny.
 ```
 
-This interaction showcases the agent's ability to engage in a conversation and gather necessary information.
-
-### Complex Task with Subtasks
-
-HEL language allows users to break down complex tasks into manageable subtasks. For example:
-
-```
-Plan my trip to New York.
-- Book a flight for next Friday.
-- Reserve a hotel room near Central Park.
-- Schedule meetings with clients on Monday and Tuesday.
+### Complex Tasks
+Represents a complex task with a sequence of subtasks.
+```hel
+Prepare breakfast:
+- Boil water.
+- Brew coffee.
+- Toast bread.
 ```
 
-The agent can execute each subtask sequentially, simplifying the management of complex tasks.
-
-### Using Context
-
-HEL language leverages context to understand the user's intent based on previous conversations. For example:
-
-```
-User: What's the weather like?
-Agent: It's sunny and 75 degrees.
-User: Great, then schedule a picnic for tomorrow afternoon.
+### Context-Aware Commands
+Represents a context-aware command.
+```hel
+Check email.
 ```
 
-The agent uses the context of the previous conversation to understand the new command.
-
-### Modular and Reusable Tasks
-
-HEL language promotes code reusability by allowing users to define and reuse tasks. For example:
-
+### Modular Task Definition and Execution
+Represents the definition of a modular task with a sequence of subtasks.
+```hel
+Define morning routine:
+- Wake up.
+- Brush teeth.
+- Exercise.
 ```
-Define my morning routine.
-- At 6:30 AM, wake me up with my favorite song.
-- At 6:35 AM, give me a summary of today's news.
-- At 6:45 AM, remind me to exercise.
-
-Execute my morning routine.
+Represents the execution of a modular task.
+```hel
+Execute morning routine.
 ```
 
-Users can define routines and execute them whenever needed, enhancing productivity.
+### CRUD Commands
+Represents CRUD commands to create, read, update, and delete entities.
+```hel
+Create user with name "John Doe".
+Read user having name "John Doe".
+Update user having name "John Doe" with email "john@example.com".
+Delete user having name "John Doe".
+```
+
+### Function Definition and Calls
+Represents the definition of a function with parameters and statements.
+```hel
+Function greet($name) {
+    Print "Hello, " $name.
+}
+```
+Represents a function call with arguments.
+```hel
+Greet("Alice").
+```
+
+### List and Dictionary Declarations
+Represents the declaration and initialization of a list.
+```hel
+List $items = ["apple", "banana", "cherry"].
+```
+Represents the declaration and initialization of a dictionary.
+```hel
+Dict $person = {"name": "John", "age": 30}.
+```
+
+## Conclusion
+
+The **hel** language is designed to be versatile and powerful, enabling efficient communication and task execution between humans and AI agents. By following the provided syntax and examples, users can create complex and context-aware commands, define and execute modular tasks, handle errors, and much more.
 
 ## HEL Grammar
 
