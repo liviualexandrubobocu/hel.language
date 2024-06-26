@@ -2,10 +2,10 @@
 
 ## Introduction
 
-The **hel** language is designed to facilitate communication between humans and AI agents, as well as between AI agents themselves.
-It aims to provide a syntax and semantics that closely resemble natural English (Hemingway's Language), making it easy for humans to understand and for machines to process.
-It aims to provide Turing completeness.
-Hel is a versatile language with a variety of features, including basic commands, conditional commands, loops, error handling, interactive commands, complex tasks, context-aware commands, modular task definition and execution, CRUD commands, function definition and calls, and list and dictionary declarations.
+The **HEL** language is designed to facilitate communication between humans and AI agents, as well as between AI agents themselves.
+- It aims to provide a syntax and semantics that closely resemble natural English (Hemingway's Language), making it easy for humans to understand and for machines to process.
+- It aims to provide Turing completeness.
+- Hel is a versatile language with a variety of features, including basic commands, conditional commands, loops, error handling, interactive commands, complex tasks, context-aware commands, modular task definition and execution, CRUD commands, function definition and calls, and list and dictionary declarations.
 
 ## Features
 
