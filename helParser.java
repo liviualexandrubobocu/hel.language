@@ -1,7 +1,4 @@
-// Generated from hel.g4 by ANTLR 4.13.1
-
-package com.hel.language;
-
+// Generated from Hel.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -12,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
-public class helParser extends Parser {
+public class HelParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -110,7 +107,7 @@ public class helParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "hel.g4"; }
+	public String getGrammarFileName() { return "Hel.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -121,14 +118,14 @@ public class helParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public helParser(TokenStream input) {
+	public HelParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ProgramContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(helParser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(HelParser.EOF, 0); }
 		public List<StatementContext> statement() {
 			return getRuleContexts(StatementContext.class);
 		}
@@ -141,11 +138,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterProgram(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterProgram(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitProgram(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitProgram(this);
 		}
 	}
 
@@ -238,11 +235,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterStatement(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitStatement(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitStatement(this);
 		}
 	}
 
@@ -373,9 +370,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class BasicCommandContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public BasicCommandContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -383,11 +380,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_basicCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterBasicCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterBasicCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitBasicCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitBasicCommand(this);
 		}
 	}
 
@@ -429,7 +426,7 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ConditionalCommandContext extends ParserRuleContext {
-		public TerminalNode IF() { return getToken(helParser.IF, 0); }
+		public TerminalNode IF() { return getToken(HelParser.IF, 0); }
 		public ConditionExprContext conditionExpr() {
 			return getRuleContext(ConditionExprContext.class,0);
 		}
@@ -442,11 +439,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_conditionalCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterConditionalCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterConditionalCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitConditionalCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitConditionalCommand(this);
 		}
 	}
 
@@ -479,22 +476,22 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class VariableAssignmentContext extends ParserRuleContext {
-		public TerminalNode LET() { return getToken(helParser.LET, 0); }
-		public TerminalNode VARIABLE() { return getToken(helParser.VARIABLE, 0); }
-		public TerminalNode WORD() { return getToken(helParser.WORD, 0); }
-		public TerminalNode NUMBER() { return getToken(helParser.NUMBER, 0); }
-		public TerminalNode STRING() { return getToken(helParser.STRING, 0); }
+		public TerminalNode LET() { return getToken(HelParser.LET, 0); }
+		public TerminalNode VARIABLE() { return getToken(HelParser.VARIABLE, 0); }
+		public TerminalNode WORD() { return getToken(HelParser.WORD, 0); }
+		public TerminalNode NUMBER() { return getToken(HelParser.NUMBER, 0); }
+		public TerminalNode STRING() { return getToken(HelParser.STRING, 0); }
 		public VariableAssignmentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_variableAssignment; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterVariableAssignment(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterVariableAssignment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitVariableAssignment(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitVariableAssignment(this);
 		}
 	}
 
@@ -544,26 +541,26 @@ public class helParser extends Parser {
 		public ConditionContext condition(int i) {
 			return getRuleContext(ConditionContext.class,i);
 		}
-		public List<TerminalNode> AND() { return getTokens(helParser.AND); }
+		public List<TerminalNode> AND() { return getTokens(HelParser.AND); }
 		public TerminalNode AND(int i) {
-			return getToken(helParser.AND, i);
+			return getToken(HelParser.AND, i);
 		}
-		public List<TerminalNode> OR() { return getTokens(helParser.OR); }
+		public List<TerminalNode> OR() { return getTokens(HelParser.OR); }
 		public TerminalNode OR(int i) {
-			return getToken(helParser.OR, i);
+			return getToken(HelParser.OR, i);
 		}
-		public TerminalNode NOT() { return getToken(helParser.NOT, 0); }
+		public TerminalNode NOT() { return getToken(HelParser.NOT, 0); }
 		public ConditionExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_conditionExpr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterConditionExpr(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterConditionExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitConditionExpr(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitConditionExpr(this);
 		}
 	}
 
@@ -632,9 +629,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ConditionContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public ConditionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -642,11 +639,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_condition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterCondition(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterCondition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitCondition(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitCondition(this);
 		}
 	}
 
@@ -686,14 +683,14 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class LoopCommandContext extends ParserRuleContext {
-		public TerminalNode EVERY() { return getToken(helParser.EVERY, 0); }
+		public TerminalNode EVERY() { return getToken(HelParser.EVERY, 0); }
 		public IntervalContext interval() {
 			return getRuleContext(IntervalContext.class,0);
 		}
 		public BasicCommandContext basicCommand() {
 			return getRuleContext(BasicCommandContext.class,0);
 		}
-		public TerminalNode FOR() { return getToken(helParser.FOR, 0); }
+		public TerminalNode FOR() { return getToken(HelParser.FOR, 0); }
 		public List<VariableAssignmentContext> variableAssignment() {
 			return getRuleContexts(VariableAssignmentContext.class);
 		}
@@ -709,18 +706,18 @@ public class helParser extends Parser {
 		public StatementContext statement(int i) {
 			return getRuleContext(StatementContext.class,i);
 		}
-		public TerminalNode WHILE() { return getToken(helParser.WHILE, 0); }
+		public TerminalNode WHILE() { return getToken(HelParser.WHILE, 0); }
 		public LoopCommandContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_loopCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterLoopCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterLoopCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitLoopCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitLoopCommand(this);
 		}
 	}
 
@@ -832,19 +829,19 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class IntervalContext extends ParserRuleContext {
-		public TerminalNode NUMBER() { return getToken(helParser.NUMBER, 0); }
-		public TerminalNode TIME_SPEC() { return getToken(helParser.TIME_SPEC, 0); }
+		public TerminalNode NUMBER() { return getToken(HelParser.NUMBER, 0); }
+		public TerminalNode TIME_SPEC() { return getToken(HelParser.TIME_SPEC, 0); }
 		public IntervalContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_interval; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterInterval(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterInterval(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitInterval(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitInterval(this);
 		}
 	}
 
@@ -912,7 +909,7 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class RememberCommandContext extends ParserRuleContext {
-		public TerminalNode REMEMBER() { return getToken(helParser.REMEMBER, 0); }
+		public TerminalNode REMEMBER() { return getToken(HelParser.REMEMBER, 0); }
 		public ThatStatementContext thatStatement() {
 			return getRuleContext(ThatStatementContext.class,0);
 		}
@@ -922,11 +919,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_rememberCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterRememberCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterRememberCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitRememberCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitRememberCommand(this);
 		}
 	}
 
@@ -960,9 +957,9 @@ public class helParser extends Parser {
 		public BasicCommandContext basicCommand() {
 			return getRuleContext(BasicCommandContext.class,0);
 		}
-		public TerminalNode FAILS() { return getToken(helParser.FAILS, 0); }
-		public TerminalNode NOTIFY() { return getToken(helParser.NOTIFY, 0); }
-		public TerminalNode ME() { return getToken(helParser.ME, 0); }
+		public TerminalNode FAILS() { return getToken(HelParser.FAILS, 0); }
+		public TerminalNode NOTIFY() { return getToken(HelParser.NOTIFY, 0); }
+		public TerminalNode ME() { return getToken(HelParser.ME, 0); }
 		public CustomErrorHandlingContext customErrorHandling() {
 			return getRuleContext(CustomErrorHandlingContext.class,0);
 		}
@@ -972,11 +969,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_errorHandlingCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterErrorHandlingCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterErrorHandlingCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitErrorHandlingCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitErrorHandlingCommand(this);
 		}
 	}
 
@@ -1027,9 +1024,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CustomErrorHandlingContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public CustomErrorHandlingContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1037,11 +1034,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_customErrorHandling; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterCustomErrorHandling(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterCustomErrorHandling(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitCustomErrorHandling(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitCustomErrorHandling(this);
 		}
 	}
 
@@ -1137,11 +1134,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interactiveCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterInteractiveCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterInteractiveCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitInteractiveCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitInteractiveCommand(this);
 		}
 	}
 
@@ -1189,9 +1186,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ComplexTaskContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public List<SubtaskContext> subtask() {
 			return getRuleContexts(SubtaskContext.class);
@@ -1205,11 +1202,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_complexTask; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterComplexTask(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterComplexTask(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitComplexTask(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitComplexTask(this);
 		}
 	}
 
@@ -1265,9 +1262,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class SubtaskContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public SubtaskContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1275,11 +1272,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_subtask; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterSubtask(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterSubtask(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitSubtask(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitSubtask(this);
 		}
 	}
 
@@ -1332,11 +1329,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_contextAwareCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterContextAwareCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterContextAwareCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitContextAwareCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitContextAwareCommand(this);
 		}
 	}
 
@@ -1363,9 +1360,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ModularTaskDefinitionContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public List<SubtaskContext> subtask() {
 			return getRuleContexts(SubtaskContext.class);
@@ -1379,11 +1376,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_modularTaskDefinition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterModularTaskDefinition(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterModularTaskDefinition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitModularTaskDefinition(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitModularTaskDefinition(this);
 		}
 	}
 
@@ -1441,9 +1438,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ModularTaskExecutionContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public ModularTaskExecutionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1451,11 +1448,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_modularTaskExecution; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterModularTaskExecution(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterModularTaskExecution(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitModularTaskExecution(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitModularTaskExecution(this);
 		}
 	}
 
@@ -1499,22 +1496,22 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class TimeSpecificationContext extends ParserRuleContext {
-		public TerminalNode MORNING() { return getToken(helParser.MORNING, 0); }
-		public TerminalNode AM() { return getToken(helParser.AM, 0); }
-		public TerminalNode TIME() { return getToken(helParser.TIME, 0); }
-		public TerminalNode NUMBER() { return getToken(helParser.NUMBER, 0); }
-		public TerminalNode PM() { return getToken(helParser.PM, 0); }
+		public TerminalNode MORNING() { return getToken(HelParser.MORNING, 0); }
+		public TerminalNode AM() { return getToken(HelParser.AM, 0); }
+		public TerminalNode TIME() { return getToken(HelParser.TIME, 0); }
+		public TerminalNode NUMBER() { return getToken(HelParser.NUMBER, 0); }
+		public TerminalNode PM() { return getToken(HelParser.PM, 0); }
 		public TimeSpecificationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_timeSpecification; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterTimeSpecification(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterTimeSpecification(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitTimeSpecification(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitTimeSpecification(this);
 		}
 	}
 
@@ -1578,10 +1575,10 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ThatStatementContext extends ParserRuleContext {
-		public TerminalNode STRING() { return getToken(helParser.STRING, 0); }
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public TerminalNode STRING() { return getToken(HelParser.STRING, 0); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public ThatStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1589,11 +1586,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_thatStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterThatStatement(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterThatStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitThatStatement(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitThatStatement(this);
 		}
 	}
 
@@ -1644,11 +1641,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dialog; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterDialog(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterDialog(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitDialog(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitDialog(this);
 		}
 	}
 
@@ -1689,11 +1686,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dialogStep; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterDialogStep(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterDialogStep(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitDialogStep(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitDialogStep(this);
 		}
 	}
 
@@ -1739,9 +1736,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ContextCommandContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public ContextCommandContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1749,11 +1746,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_contextCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterContextCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterContextCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitContextCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitContextCommand(this);
 		}
 	}
 
@@ -1795,9 +1792,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class UserCommandContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public UserCommandContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1805,11 +1802,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_userCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterUserCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterUserCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitUserCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitUserCommand(this);
 		}
 	}
 
@@ -1851,9 +1848,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class AgentCommandContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
 		public AgentCommandContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -1861,11 +1858,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_agentCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterAgentCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterAgentCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitAgentCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitAgentCommand(this);
 		}
 	}
 
@@ -1907,24 +1904,24 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CrudCommandContext extends ParserRuleContext {
-		public TerminalNode CREATE() { return getToken(helParser.CREATE, 0); }
+		public TerminalNode CREATE() { return getToken(HelParser.CREATE, 0); }
 		public EntityContext entity() {
 			return getRuleContext(EntityContext.class,0);
 		}
-		public TerminalNode READ() { return getToken(helParser.READ, 0); }
-		public TerminalNode UPDATE() { return getToken(helParser.UPDATE, 0); }
-		public TerminalNode DELETE() { return getToken(helParser.DELETE, 0); }
+		public TerminalNode READ() { return getToken(HelParser.READ, 0); }
+		public TerminalNode UPDATE() { return getToken(HelParser.UPDATE, 0); }
+		public TerminalNode DELETE() { return getToken(HelParser.DELETE, 0); }
 		public CrudCommandContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_crudCommand; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterCrudCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterCrudCommand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitCrudCommand(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitCrudCommand(this);
 		}
 	}
 
@@ -1988,17 +1985,17 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class EntityContext extends ParserRuleContext {
-		public List<TerminalNode> WORD() { return getTokens(helParser.WORD); }
+		public List<TerminalNode> WORD() { return getTokens(HelParser.WORD); }
 		public TerminalNode WORD(int i) {
-			return getToken(helParser.WORD, i);
+			return getToken(HelParser.WORD, i);
 		}
-		public List<TerminalNode> ATTRIBUTE() { return getTokens(helParser.ATTRIBUTE); }
+		public List<TerminalNode> ATTRIBUTE() { return getTokens(HelParser.ATTRIBUTE); }
 		public TerminalNode ATTRIBUTE(int i) {
-			return getToken(helParser.ATTRIBUTE, i);
+			return getToken(HelParser.ATTRIBUTE, i);
 		}
-		public List<TerminalNode> STRING() { return getTokens(helParser.STRING); }
+		public List<TerminalNode> STRING() { return getTokens(HelParser.STRING); }
 		public TerminalNode STRING(int i) {
-			return getToken(helParser.STRING, i);
+			return getToken(HelParser.STRING, i);
 		}
 		public EntityContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -2006,11 +2003,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_entity; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterEntity(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterEntity(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitEntity(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitEntity(this);
 		}
 	}
 
@@ -2073,8 +2070,8 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class FunctionDefinitionContext extends ParserRuleContext {
-		public TerminalNode FUNCTION() { return getToken(helParser.FUNCTION, 0); }
-		public TerminalNode WORD() { return getToken(helParser.WORD, 0); }
+		public TerminalNode FUNCTION() { return getToken(HelParser.FUNCTION, 0); }
+		public TerminalNode WORD() { return getToken(HelParser.WORD, 0); }
 		public List<ParameterContext> parameter() {
 			return getRuleContexts(ParameterContext.class);
 		}
@@ -2093,11 +2090,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionDefinition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterFunctionDefinition(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterFunctionDefinition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitFunctionDefinition(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitFunctionDefinition(this);
 		}
 	}
 
@@ -2175,7 +2172,7 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class FunctionCallContext extends ParserRuleContext {
-		public TerminalNode WORD() { return getToken(helParser.WORD, 0); }
+		public TerminalNode WORD() { return getToken(HelParser.WORD, 0); }
 		public List<ArgumentContext> argument() {
 			return getRuleContexts(ArgumentContext.class);
 		}
@@ -2188,11 +2185,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterFunctionCall(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterFunctionCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitFunctionCall(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitFunctionCall(this);
 		}
 	}
 
@@ -2250,18 +2247,18 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ParameterContext extends ParserRuleContext {
-		public TerminalNode VARIABLE() { return getToken(helParser.VARIABLE, 0); }
+		public TerminalNode VARIABLE() { return getToken(HelParser.VARIABLE, 0); }
 		public ParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterParameter(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitParameter(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitParameter(this);
 		}
 	}
 
@@ -2297,11 +2294,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_argument; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterArgument(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterArgument(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitArgument(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitArgument(this);
 		}
 	}
 
@@ -2328,9 +2325,9 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ExpressionContext extends ParserRuleContext {
-		public TerminalNode WORD() { return getToken(helParser.WORD, 0); }
-		public TerminalNode NUMBER() { return getToken(helParser.NUMBER, 0); }
-		public TerminalNode STRING() { return getToken(helParser.STRING, 0); }
+		public TerminalNode WORD() { return getToken(HelParser.WORD, 0); }
+		public TerminalNode NUMBER() { return getToken(HelParser.NUMBER, 0); }
+		public TerminalNode STRING() { return getToken(HelParser.STRING, 0); }
 		public FunctionCallContext functionCall() {
 			return getRuleContext(FunctionCallContext.class,0);
 		}
@@ -2340,11 +2337,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterExpression(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitExpression(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitExpression(this);
 		}
 	}
 
@@ -2398,8 +2395,8 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ListDeclarationContext extends ParserRuleContext {
-		public TerminalNode LIST() { return getToken(helParser.LIST, 0); }
-		public TerminalNode VARIABLE() { return getToken(helParser.VARIABLE, 0); }
+		public TerminalNode LIST() { return getToken(HelParser.LIST, 0); }
+		public TerminalNode VARIABLE() { return getToken(HelParser.VARIABLE, 0); }
 		public List<ElementContext> element() {
 			return getRuleContexts(ElementContext.class);
 		}
@@ -2412,11 +2409,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_listDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterListDeclaration(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterListDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitListDeclaration(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitListDeclaration(this);
 		}
 	}
 
@@ -2478,8 +2475,8 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class DictionaryDeclarationContext extends ParserRuleContext {
-		public TerminalNode DICT() { return getToken(helParser.DICT, 0); }
-		public TerminalNode VARIABLE() { return getToken(helParser.VARIABLE, 0); }
+		public TerminalNode DICT() { return getToken(HelParser.DICT, 0); }
+		public TerminalNode VARIABLE() { return getToken(HelParser.VARIABLE, 0); }
 		public List<KeyValuePairContext> keyValuePair() {
 			return getRuleContexts(KeyValuePairContext.class);
 		}
@@ -2492,11 +2489,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dictionaryDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterDictionaryDeclaration(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterDictionaryDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitDictionaryDeclaration(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitDictionaryDeclaration(this);
 		}
 	}
 
@@ -2567,11 +2564,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_element; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterElement(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitElement(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitElement(this);
 		}
 	}
 
@@ -2598,7 +2595,7 @@ public class helParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class KeyValuePairContext extends ParserRuleContext {
-		public TerminalNode STRING() { return getToken(helParser.STRING, 0); }
+		public TerminalNode STRING() { return getToken(HelParser.STRING, 0); }
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -2608,11 +2605,11 @@ public class helParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_keyValuePair; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).enterKeyValuePair(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).enterKeyValuePair(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof helListener ) ((helListener)listener).exitKeyValuePair(this);
+			if ( listener instanceof HelListener ) ((HelListener)listener).exitKeyValuePair(this);
 		}
 	}
 

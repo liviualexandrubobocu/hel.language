@@ -131,3 +131,10 @@ Refer to the HEL language grammar for a detailed understanding of the language's
 ## Conclusion
 
 The HEL language is designed to bridge the gap between human language and AI systems, providing a natural and intuitive way to interact with agentic AI. By mimicking the structure and vocabulary of natural language, it makes interaction with AI more accessible and efficient for users.
+
+## Documentation on how to run tests
+
+In a CMD terminal, run the following command
+
+```grun Hel program -tokens -gui <input_file>```
+

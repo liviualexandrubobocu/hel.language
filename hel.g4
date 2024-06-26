@@ -19,11 +19,7 @@
  * 11. List and Dictionary Declarations: Allows declaring and initializing lists and dictionaries.
  */
 
-grammar hel;
-
-@header {
-package com.hel.language;
-}
+grammar Hel;
 
 // Lexer Rules
 WS      : [ \t\r\n]+ -> skip;

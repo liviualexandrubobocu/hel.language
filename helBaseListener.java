@@ -1,451 +1,448 @@
-// Generated from hel.g4 by ANTLR 4.13.1
-
-package com.hel.language;
-
+// Generated from Hel.g4 by ANTLR 4.13.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link helListener},
+ * This class provides an empty implementation of {@link HelListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class helBaseListener implements helListener {
+public class HelBaseListener implements HelListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(helParser.ProgramContext ctx) { }
+	@Override public void enterProgram(HelParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(helParser.ProgramContext ctx) { }
+	@Override public void exitProgram(HelParser.ProgramContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(helParser.StatementContext ctx) { }
+	@Override public void enterStatement(HelParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(helParser.StatementContext ctx) { }
+	@Override public void exitStatement(HelParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBasicCommand(helParser.BasicCommandContext ctx) { }
+	@Override public void enterBasicCommand(HelParser.BasicCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBasicCommand(helParser.BasicCommandContext ctx) { }
+	@Override public void exitBasicCommand(HelParser.BasicCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConditionalCommand(helParser.ConditionalCommandContext ctx) { }
+	@Override public void enterConditionalCommand(HelParser.ConditionalCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConditionalCommand(helParser.ConditionalCommandContext ctx) { }
+	@Override public void exitConditionalCommand(HelParser.ConditionalCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariableAssignment(helParser.VariableAssignmentContext ctx) { }
+	@Override public void enterVariableAssignment(HelParser.VariableAssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariableAssignment(helParser.VariableAssignmentContext ctx) { }
+	@Override public void exitVariableAssignment(HelParser.VariableAssignmentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConditionExpr(helParser.ConditionExprContext ctx) { }
+	@Override public void enterConditionExpr(HelParser.ConditionExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConditionExpr(helParser.ConditionExprContext ctx) { }
+	@Override public void exitConditionExpr(HelParser.ConditionExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCondition(helParser.ConditionContext ctx) { }
+	@Override public void enterCondition(HelParser.ConditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCondition(helParser.ConditionContext ctx) { }
+	@Override public void exitCondition(HelParser.ConditionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLoopCommand(helParser.LoopCommandContext ctx) { }
+	@Override public void enterLoopCommand(HelParser.LoopCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLoopCommand(helParser.LoopCommandContext ctx) { }
+	@Override public void exitLoopCommand(HelParser.LoopCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInterval(helParser.IntervalContext ctx) { }
+	@Override public void enterInterval(HelParser.IntervalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInterval(helParser.IntervalContext ctx) { }
+	@Override public void exitInterval(HelParser.IntervalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRememberCommand(helParser.RememberCommandContext ctx) { }
+	@Override public void enterRememberCommand(HelParser.RememberCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRememberCommand(helParser.RememberCommandContext ctx) { }
+	@Override public void exitRememberCommand(HelParser.RememberCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterErrorHandlingCommand(helParser.ErrorHandlingCommandContext ctx) { }
+	@Override public void enterErrorHandlingCommand(HelParser.ErrorHandlingCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitErrorHandlingCommand(helParser.ErrorHandlingCommandContext ctx) { }
+	@Override public void exitErrorHandlingCommand(HelParser.ErrorHandlingCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCustomErrorHandling(helParser.CustomErrorHandlingContext ctx) { }
+	@Override public void enterCustomErrorHandling(HelParser.CustomErrorHandlingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCustomErrorHandling(helParser.CustomErrorHandlingContext ctx) { }
+	@Override public void exitCustomErrorHandling(HelParser.CustomErrorHandlingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInteractiveCommand(helParser.InteractiveCommandContext ctx) { }
+	@Override public void enterInteractiveCommand(HelParser.InteractiveCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInteractiveCommand(helParser.InteractiveCommandContext ctx) { }
+	@Override public void exitInteractiveCommand(HelParser.InteractiveCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterComplexTask(helParser.ComplexTaskContext ctx) { }
+	@Override public void enterComplexTask(HelParser.ComplexTaskContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitComplexTask(helParser.ComplexTaskContext ctx) { }
+	@Override public void exitComplexTask(HelParser.ComplexTaskContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSubtask(helParser.SubtaskContext ctx) { }
+	@Override public void enterSubtask(HelParser.SubtaskContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSubtask(helParser.SubtaskContext ctx) { }
+	@Override public void exitSubtask(HelParser.SubtaskContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterContextAwareCommand(helParser.ContextAwareCommandContext ctx) { }
+	@Override public void enterContextAwareCommand(HelParser.ContextAwareCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitContextAwareCommand(helParser.ContextAwareCommandContext ctx) { }
+	@Override public void exitContextAwareCommand(HelParser.ContextAwareCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterModularTaskDefinition(helParser.ModularTaskDefinitionContext ctx) { }
+	@Override public void enterModularTaskDefinition(HelParser.ModularTaskDefinitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitModularTaskDefinition(helParser.ModularTaskDefinitionContext ctx) { }
+	@Override public void exitModularTaskDefinition(HelParser.ModularTaskDefinitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterModularTaskExecution(helParser.ModularTaskExecutionContext ctx) { }
+	@Override public void enterModularTaskExecution(HelParser.ModularTaskExecutionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitModularTaskExecution(helParser.ModularTaskExecutionContext ctx) { }
+	@Override public void exitModularTaskExecution(HelParser.ModularTaskExecutionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTimeSpecification(helParser.TimeSpecificationContext ctx) { }
+	@Override public void enterTimeSpecification(HelParser.TimeSpecificationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTimeSpecification(helParser.TimeSpecificationContext ctx) { }
+	@Override public void exitTimeSpecification(HelParser.TimeSpecificationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterThatStatement(helParser.ThatStatementContext ctx) { }
+	@Override public void enterThatStatement(HelParser.ThatStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitThatStatement(helParser.ThatStatementContext ctx) { }
+	@Override public void exitThatStatement(HelParser.ThatStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDialog(helParser.DialogContext ctx) { }
+	@Override public void enterDialog(HelParser.DialogContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDialog(helParser.DialogContext ctx) { }
+	@Override public void exitDialog(HelParser.DialogContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDialogStep(helParser.DialogStepContext ctx) { }
+	@Override public void enterDialogStep(HelParser.DialogStepContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDialogStep(helParser.DialogStepContext ctx) { }
+	@Override public void exitDialogStep(HelParser.DialogStepContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterContextCommand(helParser.ContextCommandContext ctx) { }
+	@Override public void enterContextCommand(HelParser.ContextCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitContextCommand(helParser.ContextCommandContext ctx) { }
+	@Override public void exitContextCommand(HelParser.ContextCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUserCommand(helParser.UserCommandContext ctx) { }
+	@Override public void enterUserCommand(HelParser.UserCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUserCommand(helParser.UserCommandContext ctx) { }
+	@Override public void exitUserCommand(HelParser.UserCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAgentCommand(helParser.AgentCommandContext ctx) { }
+	@Override public void enterAgentCommand(HelParser.AgentCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAgentCommand(helParser.AgentCommandContext ctx) { }
+	@Override public void exitAgentCommand(HelParser.AgentCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCrudCommand(helParser.CrudCommandContext ctx) { }
+	@Override public void enterCrudCommand(HelParser.CrudCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCrudCommand(helParser.CrudCommandContext ctx) { }
+	@Override public void exitCrudCommand(HelParser.CrudCommandContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEntity(helParser.EntityContext ctx) { }
+	@Override public void enterEntity(HelParser.EntityContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEntity(helParser.EntityContext ctx) { }
+	@Override public void exitEntity(HelParser.EntityContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionDefinition(helParser.FunctionDefinitionContext ctx) { }
+	@Override public void enterFunctionDefinition(HelParser.FunctionDefinitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionDefinition(helParser.FunctionDefinitionContext ctx) { }
+	@Override public void exitFunctionDefinition(HelParser.FunctionDefinitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionCall(helParser.FunctionCallContext ctx) { }
+	@Override public void enterFunctionCall(HelParser.FunctionCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionCall(helParser.FunctionCallContext ctx) { }
+	@Override public void exitFunctionCall(HelParser.FunctionCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParameter(helParser.ParameterContext ctx) { }
+	@Override public void enterParameter(HelParser.ParameterContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParameter(helParser.ParameterContext ctx) { }
+	@Override public void exitParameter(HelParser.ParameterContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArgument(helParser.ArgumentContext ctx) { }
+	@Override public void enterArgument(HelParser.ArgumentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArgument(helParser.ArgumentContext ctx) { }
+	@Override public void exitArgument(HelParser.ArgumentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(helParser.ExpressionContext ctx) { }
+	@Override public void enterExpression(HelParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(helParser.ExpressionContext ctx) { }
+	@Override public void exitExpression(HelParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterListDeclaration(helParser.ListDeclarationContext ctx) { }
+	@Override public void enterListDeclaration(HelParser.ListDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitListDeclaration(helParser.ListDeclarationContext ctx) { }
+	@Override public void exitListDeclaration(HelParser.ListDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDictionaryDeclaration(helParser.DictionaryDeclarationContext ctx) { }
+	@Override public void enterDictionaryDeclaration(HelParser.DictionaryDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDictionaryDeclaration(helParser.DictionaryDeclarationContext ctx) { }
+	@Override public void exitDictionaryDeclaration(HelParser.DictionaryDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElement(helParser.ElementContext ctx) { }
+	@Override public void enterElement(HelParser.ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElement(helParser.ElementContext ctx) { }
+	@Override public void exitElement(HelParser.ElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterKeyValuePair(helParser.KeyValuePairContext ctx) { }
+	@Override public void enterKeyValuePair(HelParser.KeyValuePairContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitKeyValuePair(helParser.KeyValuePairContext ctx) { }
+	@Override public void exitKeyValuePair(HelParser.KeyValuePairContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

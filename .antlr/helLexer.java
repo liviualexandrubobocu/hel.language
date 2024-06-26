@@ -1,7 +1,4 @@
 // Generated from c:/Users/liviu/Desktop/Work/hel.language/hel.g4 by ANTLR 4.13.1
-
-package com.hel.language;
-
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -12,7 +9,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue", "this-escape"})
-public class helLexer extends Lexer {
+public class HelLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -104,7 +101,7 @@ public class helLexer extends Lexer {
 	}
 
 
-	public helLexer(CharStream input) {
+	public HelLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}

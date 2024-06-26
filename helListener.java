@@ -1,372 +1,369 @@
-// Generated from hel.g4 by ANTLR 4.13.1
-
-package com.hel.language;
-
+// Generated from Hel.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
  * This interface defines a complete listener for a parse tree produced by
- * {@link helParser}.
+ * {@link HelParser}.
  */
-public interface helListener extends ParseTreeListener {
+public interface HelListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link helParser#program}.
+	 * Enter a parse tree produced by {@link HelParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void enterProgram(helParser.ProgramContext ctx);
+	void enterProgram(HelParser.ProgramContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#program}.
+	 * Exit a parse tree produced by {@link HelParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void exitProgram(helParser.ProgramContext ctx);
+	void exitProgram(HelParser.ProgramContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#statement}.
+	 * Enter a parse tree produced by {@link HelParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(helParser.StatementContext ctx);
+	void enterStatement(HelParser.StatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#statement}.
+	 * Exit a parse tree produced by {@link HelParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(helParser.StatementContext ctx);
+	void exitStatement(HelParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#basicCommand}.
+	 * Enter a parse tree produced by {@link HelParser#basicCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterBasicCommand(helParser.BasicCommandContext ctx);
+	void enterBasicCommand(HelParser.BasicCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#basicCommand}.
+	 * Exit a parse tree produced by {@link HelParser#basicCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitBasicCommand(helParser.BasicCommandContext ctx);
+	void exitBasicCommand(HelParser.BasicCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#conditionalCommand}.
+	 * Enter a parse tree produced by {@link HelParser#conditionalCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterConditionalCommand(helParser.ConditionalCommandContext ctx);
+	void enterConditionalCommand(HelParser.ConditionalCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#conditionalCommand}.
+	 * Exit a parse tree produced by {@link HelParser#conditionalCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitConditionalCommand(helParser.ConditionalCommandContext ctx);
+	void exitConditionalCommand(HelParser.ConditionalCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#variableAssignment}.
+	 * Enter a parse tree produced by {@link HelParser#variableAssignment}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariableAssignment(helParser.VariableAssignmentContext ctx);
+	void enterVariableAssignment(HelParser.VariableAssignmentContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#variableAssignment}.
+	 * Exit a parse tree produced by {@link HelParser#variableAssignment}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariableAssignment(helParser.VariableAssignmentContext ctx);
+	void exitVariableAssignment(HelParser.VariableAssignmentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#conditionExpr}.
+	 * Enter a parse tree produced by {@link HelParser#conditionExpr}.
 	 * @param ctx the parse tree
 	 */
-	void enterConditionExpr(helParser.ConditionExprContext ctx);
+	void enterConditionExpr(HelParser.ConditionExprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#conditionExpr}.
+	 * Exit a parse tree produced by {@link HelParser#conditionExpr}.
 	 * @param ctx the parse tree
 	 */
-	void exitConditionExpr(helParser.ConditionExprContext ctx);
+	void exitConditionExpr(HelParser.ConditionExprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#condition}.
+	 * Enter a parse tree produced by {@link HelParser#condition}.
 	 * @param ctx the parse tree
 	 */
-	void enterCondition(helParser.ConditionContext ctx);
+	void enterCondition(HelParser.ConditionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#condition}.
+	 * Exit a parse tree produced by {@link HelParser#condition}.
 	 * @param ctx the parse tree
 	 */
-	void exitCondition(helParser.ConditionContext ctx);
+	void exitCondition(HelParser.ConditionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#loopCommand}.
+	 * Enter a parse tree produced by {@link HelParser#loopCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterLoopCommand(helParser.LoopCommandContext ctx);
+	void enterLoopCommand(HelParser.LoopCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#loopCommand}.
+	 * Exit a parse tree produced by {@link HelParser#loopCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitLoopCommand(helParser.LoopCommandContext ctx);
+	void exitLoopCommand(HelParser.LoopCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#interval}.
+	 * Enter a parse tree produced by {@link HelParser#interval}.
 	 * @param ctx the parse tree
 	 */
-	void enterInterval(helParser.IntervalContext ctx);
+	void enterInterval(HelParser.IntervalContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#interval}.
+	 * Exit a parse tree produced by {@link HelParser#interval}.
 	 * @param ctx the parse tree
 	 */
-	void exitInterval(helParser.IntervalContext ctx);
+	void exitInterval(HelParser.IntervalContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#rememberCommand}.
+	 * Enter a parse tree produced by {@link HelParser#rememberCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterRememberCommand(helParser.RememberCommandContext ctx);
+	void enterRememberCommand(HelParser.RememberCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#rememberCommand}.
+	 * Exit a parse tree produced by {@link HelParser#rememberCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitRememberCommand(helParser.RememberCommandContext ctx);
+	void exitRememberCommand(HelParser.RememberCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#errorHandlingCommand}.
+	 * Enter a parse tree produced by {@link HelParser#errorHandlingCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterErrorHandlingCommand(helParser.ErrorHandlingCommandContext ctx);
+	void enterErrorHandlingCommand(HelParser.ErrorHandlingCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#errorHandlingCommand}.
+	 * Exit a parse tree produced by {@link HelParser#errorHandlingCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitErrorHandlingCommand(helParser.ErrorHandlingCommandContext ctx);
+	void exitErrorHandlingCommand(HelParser.ErrorHandlingCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#customErrorHandling}.
+	 * Enter a parse tree produced by {@link HelParser#customErrorHandling}.
 	 * @param ctx the parse tree
 	 */
-	void enterCustomErrorHandling(helParser.CustomErrorHandlingContext ctx);
+	void enterCustomErrorHandling(HelParser.CustomErrorHandlingContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#customErrorHandling}.
+	 * Exit a parse tree produced by {@link HelParser#customErrorHandling}.
 	 * @param ctx the parse tree
 	 */
-	void exitCustomErrorHandling(helParser.CustomErrorHandlingContext ctx);
+	void exitCustomErrorHandling(HelParser.CustomErrorHandlingContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#interactiveCommand}.
+	 * Enter a parse tree produced by {@link HelParser#interactiveCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterInteractiveCommand(helParser.InteractiveCommandContext ctx);
+	void enterInteractiveCommand(HelParser.InteractiveCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#interactiveCommand}.
+	 * Exit a parse tree produced by {@link HelParser#interactiveCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitInteractiveCommand(helParser.InteractiveCommandContext ctx);
+	void exitInteractiveCommand(HelParser.InteractiveCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#complexTask}.
+	 * Enter a parse tree produced by {@link HelParser#complexTask}.
 	 * @param ctx the parse tree
 	 */
-	void enterComplexTask(helParser.ComplexTaskContext ctx);
+	void enterComplexTask(HelParser.ComplexTaskContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#complexTask}.
+	 * Exit a parse tree produced by {@link HelParser#complexTask}.
 	 * @param ctx the parse tree
 	 */
-	void exitComplexTask(helParser.ComplexTaskContext ctx);
+	void exitComplexTask(HelParser.ComplexTaskContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#subtask}.
+	 * Enter a parse tree produced by {@link HelParser#subtask}.
 	 * @param ctx the parse tree
 	 */
-	void enterSubtask(helParser.SubtaskContext ctx);
+	void enterSubtask(HelParser.SubtaskContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#subtask}.
+	 * Exit a parse tree produced by {@link HelParser#subtask}.
 	 * @param ctx the parse tree
 	 */
-	void exitSubtask(helParser.SubtaskContext ctx);
+	void exitSubtask(HelParser.SubtaskContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#contextAwareCommand}.
+	 * Enter a parse tree produced by {@link HelParser#contextAwareCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterContextAwareCommand(helParser.ContextAwareCommandContext ctx);
+	void enterContextAwareCommand(HelParser.ContextAwareCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#contextAwareCommand}.
+	 * Exit a parse tree produced by {@link HelParser#contextAwareCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitContextAwareCommand(helParser.ContextAwareCommandContext ctx);
+	void exitContextAwareCommand(HelParser.ContextAwareCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#modularTaskDefinition}.
+	 * Enter a parse tree produced by {@link HelParser#modularTaskDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void enterModularTaskDefinition(helParser.ModularTaskDefinitionContext ctx);
+	void enterModularTaskDefinition(HelParser.ModularTaskDefinitionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#modularTaskDefinition}.
+	 * Exit a parse tree produced by {@link HelParser#modularTaskDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void exitModularTaskDefinition(helParser.ModularTaskDefinitionContext ctx);
+	void exitModularTaskDefinition(HelParser.ModularTaskDefinitionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#modularTaskExecution}.
+	 * Enter a parse tree produced by {@link HelParser#modularTaskExecution}.
 	 * @param ctx the parse tree
 	 */
-	void enterModularTaskExecution(helParser.ModularTaskExecutionContext ctx);
+	void enterModularTaskExecution(HelParser.ModularTaskExecutionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#modularTaskExecution}.
+	 * Exit a parse tree produced by {@link HelParser#modularTaskExecution}.
 	 * @param ctx the parse tree
 	 */
-	void exitModularTaskExecution(helParser.ModularTaskExecutionContext ctx);
+	void exitModularTaskExecution(HelParser.ModularTaskExecutionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#timeSpecification}.
+	 * Enter a parse tree produced by {@link HelParser#timeSpecification}.
 	 * @param ctx the parse tree
 	 */
-	void enterTimeSpecification(helParser.TimeSpecificationContext ctx);
+	void enterTimeSpecification(HelParser.TimeSpecificationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#timeSpecification}.
+	 * Exit a parse tree produced by {@link HelParser#timeSpecification}.
 	 * @param ctx the parse tree
 	 */
-	void exitTimeSpecification(helParser.TimeSpecificationContext ctx);
+	void exitTimeSpecification(HelParser.TimeSpecificationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#thatStatement}.
+	 * Enter a parse tree produced by {@link HelParser#thatStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterThatStatement(helParser.ThatStatementContext ctx);
+	void enterThatStatement(HelParser.ThatStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#thatStatement}.
+	 * Exit a parse tree produced by {@link HelParser#thatStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitThatStatement(helParser.ThatStatementContext ctx);
+	void exitThatStatement(HelParser.ThatStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#dialog}.
+	 * Enter a parse tree produced by {@link HelParser#dialog}.
 	 * @param ctx the parse tree
 	 */
-	void enterDialog(helParser.DialogContext ctx);
+	void enterDialog(HelParser.DialogContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#dialog}.
+	 * Exit a parse tree produced by {@link HelParser#dialog}.
 	 * @param ctx the parse tree
 	 */
-	void exitDialog(helParser.DialogContext ctx);
+	void exitDialog(HelParser.DialogContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#dialogStep}.
+	 * Enter a parse tree produced by {@link HelParser#dialogStep}.
 	 * @param ctx the parse tree
 	 */
-	void enterDialogStep(helParser.DialogStepContext ctx);
+	void enterDialogStep(HelParser.DialogStepContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#dialogStep}.
+	 * Exit a parse tree produced by {@link HelParser#dialogStep}.
 	 * @param ctx the parse tree
 	 */
-	void exitDialogStep(helParser.DialogStepContext ctx);
+	void exitDialogStep(HelParser.DialogStepContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#contextCommand}.
+	 * Enter a parse tree produced by {@link HelParser#contextCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterContextCommand(helParser.ContextCommandContext ctx);
+	void enterContextCommand(HelParser.ContextCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#contextCommand}.
+	 * Exit a parse tree produced by {@link HelParser#contextCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitContextCommand(helParser.ContextCommandContext ctx);
+	void exitContextCommand(HelParser.ContextCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#userCommand}.
+	 * Enter a parse tree produced by {@link HelParser#userCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterUserCommand(helParser.UserCommandContext ctx);
+	void enterUserCommand(HelParser.UserCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#userCommand}.
+	 * Exit a parse tree produced by {@link HelParser#userCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitUserCommand(helParser.UserCommandContext ctx);
+	void exitUserCommand(HelParser.UserCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#agentCommand}.
+	 * Enter a parse tree produced by {@link HelParser#agentCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterAgentCommand(helParser.AgentCommandContext ctx);
+	void enterAgentCommand(HelParser.AgentCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#agentCommand}.
+	 * Exit a parse tree produced by {@link HelParser#agentCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitAgentCommand(helParser.AgentCommandContext ctx);
+	void exitAgentCommand(HelParser.AgentCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#crudCommand}.
+	 * Enter a parse tree produced by {@link HelParser#crudCommand}.
 	 * @param ctx the parse tree
 	 */
-	void enterCrudCommand(helParser.CrudCommandContext ctx);
+	void enterCrudCommand(HelParser.CrudCommandContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#crudCommand}.
+	 * Exit a parse tree produced by {@link HelParser#crudCommand}.
 	 * @param ctx the parse tree
 	 */
-	void exitCrudCommand(helParser.CrudCommandContext ctx);
+	void exitCrudCommand(HelParser.CrudCommandContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#entity}.
+	 * Enter a parse tree produced by {@link HelParser#entity}.
 	 * @param ctx the parse tree
 	 */
-	void enterEntity(helParser.EntityContext ctx);
+	void enterEntity(HelParser.EntityContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#entity}.
+	 * Exit a parse tree produced by {@link HelParser#entity}.
 	 * @param ctx the parse tree
 	 */
-	void exitEntity(helParser.EntityContext ctx);
+	void exitEntity(HelParser.EntityContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#functionDefinition}.
+	 * Enter a parse tree produced by {@link HelParser#functionDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionDefinition(helParser.FunctionDefinitionContext ctx);
+	void enterFunctionDefinition(HelParser.FunctionDefinitionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#functionDefinition}.
+	 * Exit a parse tree produced by {@link HelParser#functionDefinition}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionDefinition(helParser.FunctionDefinitionContext ctx);
+	void exitFunctionDefinition(HelParser.FunctionDefinitionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#functionCall}.
+	 * Enter a parse tree produced by {@link HelParser#functionCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionCall(helParser.FunctionCallContext ctx);
+	void enterFunctionCall(HelParser.FunctionCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#functionCall}.
+	 * Exit a parse tree produced by {@link HelParser#functionCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionCall(helParser.FunctionCallContext ctx);
+	void exitFunctionCall(HelParser.FunctionCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#parameter}.
+	 * Enter a parse tree produced by {@link HelParser#parameter}.
 	 * @param ctx the parse tree
 	 */
-	void enterParameter(helParser.ParameterContext ctx);
+	void enterParameter(HelParser.ParameterContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#parameter}.
+	 * Exit a parse tree produced by {@link HelParser#parameter}.
 	 * @param ctx the parse tree
 	 */
-	void exitParameter(helParser.ParameterContext ctx);
+	void exitParameter(HelParser.ParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#argument}.
+	 * Enter a parse tree produced by {@link HelParser#argument}.
 	 * @param ctx the parse tree
 	 */
-	void enterArgument(helParser.ArgumentContext ctx);
+	void enterArgument(HelParser.ArgumentContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#argument}.
+	 * Exit a parse tree produced by {@link HelParser#argument}.
 	 * @param ctx the parse tree
 	 */
-	void exitArgument(helParser.ArgumentContext ctx);
+	void exitArgument(HelParser.ArgumentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#expression}.
+	 * Enter a parse tree produced by {@link HelParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(helParser.ExpressionContext ctx);
+	void enterExpression(HelParser.ExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#expression}.
+	 * Exit a parse tree produced by {@link HelParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(helParser.ExpressionContext ctx);
+	void exitExpression(HelParser.ExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#listDeclaration}.
+	 * Enter a parse tree produced by {@link HelParser#listDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterListDeclaration(helParser.ListDeclarationContext ctx);
+	void enterListDeclaration(HelParser.ListDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#listDeclaration}.
+	 * Exit a parse tree produced by {@link HelParser#listDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitListDeclaration(helParser.ListDeclarationContext ctx);
+	void exitListDeclaration(HelParser.ListDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#dictionaryDeclaration}.
+	 * Enter a parse tree produced by {@link HelParser#dictionaryDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterDictionaryDeclaration(helParser.DictionaryDeclarationContext ctx);
+	void enterDictionaryDeclaration(HelParser.DictionaryDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#dictionaryDeclaration}.
+	 * Exit a parse tree produced by {@link HelParser#dictionaryDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitDictionaryDeclaration(helParser.DictionaryDeclarationContext ctx);
+	void exitDictionaryDeclaration(HelParser.DictionaryDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#element}.
+	 * Enter a parse tree produced by {@link HelParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void enterElement(helParser.ElementContext ctx);
+	void enterElement(HelParser.ElementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#element}.
+	 * Exit a parse tree produced by {@link HelParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void exitElement(helParser.ElementContext ctx);
+	void exitElement(HelParser.ElementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link helParser#keyValuePair}.
+	 * Enter a parse tree produced by {@link HelParser#keyValuePair}.
 	 * @param ctx the parse tree
 	 */
-	void enterKeyValuePair(helParser.KeyValuePairContext ctx);
+	void enterKeyValuePair(HelParser.KeyValuePairContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link helParser#keyValuePair}.
+	 * Exit a parse tree produced by {@link HelParser#keyValuePair}.
 	 * @param ctx the parse tree
 	 */
-	void exitKeyValuePair(helParser.KeyValuePairContext ctx);
+	void exitKeyValuePair(HelParser.KeyValuePairContext ctx);
 }
