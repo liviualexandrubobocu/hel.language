@@ -3,3 +3,17 @@ function greet($name) {
 }
 
 greet("Alice").
+
+// Variable declaration with type
+let $x: int = 5.
+
+// Function definition with typed parameters and return type
+function add(a: int, b: int): int {
+    let result: int = a + b.
+    return result.
+}
+
+// Generic list declaration
+List $numbers: List<int> = [1, 2, 3, 4, 5].
+
+const $pi: float = 3.14159.

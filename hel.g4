@@ -20,6 +20,7 @@
  */
 
 grammar Hel;
+import StaticTypes, GenericTypes, PatternMatching;
 
 // Lexer Rules
 WS      : [ \t\r\n]+ -> skip;
@@ -56,6 +57,7 @@ LIST        : 'List';
 DICT        : 'Dict';
 LET         : 'let';
 WHILE       : 'while';
+IMMUTABLE  : 'const';
 
 // Parser Rules
 program
@@ -89,7 +91,7 @@ conditionalCommand
     ;
 
 variableAssignment
-    : LET VARIABLE '=' (WORD | NUMBER | STRING) '.'
+    : (LET | IMMUTABLE) VARIABLE ':' TYPE '=' (WORD | NUMBER | STRING) '.'
     ;
 
 conditionExpr
@@ -198,7 +200,7 @@ ATTRIBUTE
     ;
 
 functionDefinition
-    : FUNCTION WORD '(' (parameter (',' parameter)*)? ')' '{' (statement)+ '}' // Represents the definition of a function with parameters and statements.
+    : FUNCTION WORD '(' (parameter (',' parameter)*)? ')' ':' TYPE '{' (statement)+ '}'
     ;
 
 functionCall

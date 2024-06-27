@@ -366,4 +366,14 @@ public interface HelListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitKeyValuePair(HelParser.KeyValuePairContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link HelParser#genericType}.
+	 * @param ctx the parse tree
+	 */
+	void enterGenericType(HelParser.GenericTypeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link HelParser#genericType}.
+	 * @param ctx the parse tree
+	 */
+	void exitGenericType(HelParser.GenericTypeContext ctx);
 }

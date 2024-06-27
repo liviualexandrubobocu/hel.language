@@ -443,6 +443,18 @@ public class HelBaseListener implements HelListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitKeyValuePair(HelParser.KeyValuePairContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterGenericType(HelParser.GenericTypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitGenericType(HelParser.GenericTypeContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
