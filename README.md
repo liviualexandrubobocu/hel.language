@@ -165,3 +165,28 @@ In a CMD terminal, run the following command
 
 ```grun Hel program -tokens -gui <input_file>```
 
+``` brew install llvm ```
+
+```
+echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+```
+
+```
+brew install llvm
+brew link --force llvm # later brew unlink llvm
+ln -s /usr/local/Cellar/llvm/3.6.1/include/llvm/Config/llvm-config.h config.h
+```
+
+```
+clang++ -std=c++11 `llvm-config --cxxflags` generate_ir.cpp -o generate_ir `llvm-config --ldflags --libs core irreader` -lpthread -lz -ldl -ltinfo
+./generate_ir > command_module.ll
+
+clang++ -std=c++11 -c runtime.cpp -o runtime.o
+
+llvm-link command_module.ll runtime.o -o combined.bc
+clang++ -o final_executable combined.bc `llvm-config --cxxflags --ldflags --libs core irreader` -lpthread -lz -ldl -ltinfo
+
+./final_executable
+```
+
